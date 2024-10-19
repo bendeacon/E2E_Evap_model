@@ -1,0 +1,20 @@
+{
+  "version" : "5.1.2.v202310091347",
+  "projects" : [ {
+    "name" : "KNIME_project_backup",
+    "active" : false,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "KNIME_project_backup"
+    }
+  }, {
+    "name" : "Unilever1",
+    "active" : true,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "Unilever1"
+    }
+  } ]
+}

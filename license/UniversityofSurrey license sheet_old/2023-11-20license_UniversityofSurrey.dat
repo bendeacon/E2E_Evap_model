@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Infocom>
+<License>
+<Property Name="Node Category" Value="IO Category"/>
+<Property Name="Licensee" Value="UniversityofSurrey"/>
+<Property Name="Expiration Date" Value="2023-11-20"/>
+<Signature Value="4YSd0JiIYPodOGYZ40OiKa/MKJ/A03i7"/>
+</License>
+<License>
+<Property Name="Node Category" Value="Converter Category"/>
+<Property Name="Licensee" Value="UniversityofSurrey"/>
+<Property Name="Expiration Date" Value="2023-11-20"/>
+<Signature Value="3AIdRp+nt96KZKiYxx8ovfxI26i6LnFeHZwd+bBiLYw="/>
+</License>
+<License>
+<Property Name="Node Category" Value="Marvin Category"/>
+<Property Name="Licensee" Value="UniversityofSurrey"/>
+<Property Name="Expiration Date" Value="2023-11-20"/>
+<Signature Value="tp47HB53ITGnSFhgbK3TVRQwJmG3Ynnz/Bk3bjnXLWA="/>
+</License>
+<License>
+<Property Name="Node Category" Value="Calculator Plugins Category"/>
+<Property Name="Licensee" Value="UniversityofSurrey"/>
+<Property Name="Expiration Date" Value="2023-11-20"/>
+<Signature Value="eFoIHrXh6AyIB3wZfn0vKn4Qzs/c5jXUCxFCfGM2pCrfLHWWQopNvg=="/>
+</License>
+<License>
+<Property Name="Node Category" Value="JChem Base Category"/>
+<Property Name="Licensee" Value="UniversityofSurrey"/>
+<Property Name="Expiration Date" Value="2023-11-20"/>
+<Signature Value="Gnv3TPKshbPiwyGZ56DbufiolF6gF+9nw9IDt704FwI="/>
+</License>
+<License>
+<Property Name="Node Category" Value="JChem Cartridge Category"/>
+<Property Name="Licensee" Value="UniversityofSurrey"/>
+<Property Name="Expiration Date" Value="2023-11-20"/>
+<Signature Value="hopY62KCyXwf+n0XE/+KfGMn/V/9J409oEE39R/55ZcgJ44MkwU8Pw=="/>
+</License>
+<License>
+<Property Name="Node Category" Value="Standardizer Category"/>
+<Property Name="Licensee" Value="UniversityofSurrey"/>
+<Property Name="Expiration Date" Value="2023-11-20"/>
+<Signature Value="9slG620uSEdGb+KOvVzBQmJZnjj1IU010BNsVQVdcXVJkCXwGK+Bag=="/>
+</License>
+<License>
+<Property Name="Node Category" Value="Structure Checker Category"/>
+<Property Name="Licensee" Value="UniversityofSurrey"/>
+<Property Name="Expiration Date" Value="2023-11-20"/>
+<Signature Value="t3vC2LdnncBe36dWQcVV10ncMZbczNefJkjqraTpBefh8BIZmM4K+w=="/>
+</License>
+<License>
+<Property Name="Node Category" Value="Name to Structure Category"/>
+<Property Name="Licensee" Value="UniversityofSurrey"/>
+<Property Name="Expiration Date" Value="2023-11-20"/>
+<Signature Value="WDWX9oXYVFmJ71bX+eT/zYadCFH65CQdQWn+XsKUqsmmjhoII1whaQ=="/>
+</License>
+<License>
+<Property Name="Node Category" Value="Screen Category"/>
+<Property Name="Licensee" Value="UniversityofSurrey"/>
+<Property Name="Expiration Date" Value="2023-11-20"/>
+<Signature Value="vz05BL4bpYXCHYJym0ShBw0zxFJS8SjTY/BRIxGNYrE="/>
+</License>
+<License>
+<Property Name="Node Category" Value="JKlustor Category"/>
+<Property Name="Licensee" Value="UniversityofSurrey"/>
+<Property Name="Expiration Date" Value="2023-11-20"/>
+<Signature Value="x6nT3y2v8fT/GDIsrt35QiUmuep/oDagAiK93Tf1Kok="/>
+</License>
+<License>
+<Property Name="Node Category" Value="Reactor Category"/>
+<Property Name="Licensee" Value="UniversityofSurrey"/>
+<Property Name="Expiration Date" Value="2023-11-20"/>
+<Signature Value="p8aT9kaaqzwBiN3xK67rXohv34ycLvK02vXq0GFz8AA="/>
+</License>
+<License>
+<Property Name="Node Category" Value="Metabolizer Category"/>
+<Property Name="Licensee" Value="UniversityofSurrey"/>
+<Property Name="Expiration Date" Value="2023-11-20"/>
+<Signature Value="L2yPUCucUudomkBuE9yU3SOxcafAJFRmtXOc5xrKJNg="/>
+</License>
+<License>
+<Property Name="Node Category" Value="Fragmenter Category"/>
+<Property Name="Licensee" Value="UniversityofSurrey"/>
+<Property Name="Expiration Date" Value="2023-11-20"/>
+<Signature Value="k49XzcZ7nto3iQmWyI2DNJL6nBr7HvQaIzK1Bm2z9pc="/>
+</License>
+</Infocom>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="settings.xml">
+    <entry key="node_file" type="xstring" value="settings.xml"/>
+    <config key="flow_stack"/>
+    <config key="internal_node_subsettings">
+        <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
+    </config>
+    <config key="model">
+        <entry key="sourceCode" type="xstring" value="# Copy input to output%%00010import pymysql%%00010import pandas as pd%%00010pd.options.mode.chained_assignment = None  # default='warn'%%00010import os%%00010%%00010smiles = input_table_1.loc['Row0', 'active_name']%%00010%%00010formulation = input_table_1.loc['Row0', 'formulation name']%%00010%%00010db = pymysql.connect(host='localhost',%%00010                     user='root',%%00010                     password='',%%00010                     database='knimeproject')%%00010%%00010cursor = db.cursor()%%00010%%00010sql = &quot;SELECT * FROM ACTIVE\%%00010       WHERE NAME = '%s'&quot; % smiles%%00010try:%%00010    # execute sql command%%00010    cursor.execute(sql)%%00010    a = cursor.fetchone()%%00010except:%%00010    print (&quot;Error: unable to fetch data&quot;)%%00010    %%00010if not a:%%00010    smiles_name = input_table_1.loc['Row0', 'smiles']%%00010    sql = &quot;INSERT INTO ACTIVE(NAME, SMILE) \%%00010       VALUES ('%s', '%s')&quot; % (smiles, smiles_name)%%00010    try:%%00010        cursor.execute(sql)%%00010        db.commit()%%00010    except:%%00010        db.rollback()%%00010%%00010sql = &quot;SELECT * FROM FORMULATION\%%00010       WHERE NAME = '%s'&quot; % formulation%%00010%%00010try:%%00010    # execute sql command%%00010    cursor.execute(sql)%%00010    a = cursor.fetchone()%%00010except:%%00010    print (&quot;Error: unable to fetch data&quot;)  %%00010%%00010# Fetching vapor pressure (vp) from the SQL database%%00010sql_vp = &quot;SELECT vapour_pressure FROM ACTIVE WHERE NAME = '%s'&quot; % smiles%%00010try:%%00010    cursor.execute(sql_vp)%%00010    Chem_VP = cursor.fetchone()[0]  # Assuming vp is stored as a single value in the database%%00010except:%%00010    print(&quot;Error: unable to fetch vapor pressure data&quot;)%%00010%%00010# Fetching Density from the SQL database%%00010sql_Density = &quot;SELECT Density FROM ACTIVE WHERE NAME = '%s'&quot; % smiles%%00010try:%%00010    cursor.execute(sql_Density)%%00010    Chem_Density = cursor.fetchone()[0]  # Assuming Density is stored as a single value in the database%%00010except:%%00010    print(&quot;Error: unable to fetch vapor pressure data&quot;)%%00010%%00010# Fetching Fnon from the SQL database%%00010sql_Fnon = &quot;SELECT Fnon FROM ACTIVE WHERE NAME = '%s'&quot; % smiles%%00010try:%%00010    cursor.execute(sql_Fnon)%%00010    Chem_Fnon = cursor.fetchone()[0]  # Assuming Density is stored as a single value in the database%%00010except:%%00010    print(&quot;Error: unable to fetch vapor pressure data&quot;)%%00010%%00010# Fetching Fu from the SQL database%%00010sql_Fu = &quot;SELECT Fu FROM ACTIVE WHERE NAME = '%s'&quot; % smiles%%00010try:%%00010    cursor.execute(sql_Fu)%%00010    Chem_Fu = cursor.fetchone()[0]  # Assuming Density is stored as a single value in the database%%00010except:%%00010    print(&quot;Error: unable to fetch vapor pressure data&quot;)%%00010%%00010if not a:%%00010    cosolvent = input_table_1.loc['Row0', 'cosolvent']%%00010    cosolvent_fraction = input_table_1.loc['Row0', 'mass_fraction_of_cosolvent']%%00010    surfactants_fraction = input_table_1.loc['Row0', 'mass_fraction_of_surfactants']%%00010    insoluble_fraction = input_table_1.loc['Row0', 'mass_fraction_of_insoluble']%%00010    water_fraction = input_table_1.loc['Row0', 'fw']%%00010    oil_fraction = input_table_1.loc['Row0', 'fo']%%00010    pH = input_table_1.loc['Row0', 'pH']%%00010    active_fraction = input_table_1.loc['Row0', 'active fraction']%%00010    %%00010    sql = &quot;INSERT INTO FORMULATION(NAME, COSOLVENT, COSOLVENT_FRACTION, WATER_FRACTION, OIL_FRACTION, SURFACTANT_FRACTION, INSOLUBLE_FRACTION, pH, FRACTION) \%%00010       VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')&quot; % (formulation, cosolvent, cosolvent_fraction, water_fraction, oil_fraction, surfactants_fraction, insoluble_fraction, pH, active_fraction)%%00010    try:%%00010        cursor.execute(sql)%%00010        db.commit()%%00010    except:%%00010        db.rollback()        %%00010# close database%%00010db.close()%%00010   %%00010output_table_1 = input_table_1%%00010# Inserting vp into the output table%%00010output_table_1.loc['Row0', 'Chem_VP'] = Chem_VP%%00010%%00010output_table_1.loc['Row0', 'CHEM_DENSITY'] = Chem_Density%%00010%%00010output_table_1.loc['Row0', 'CHEM_NONION'] =  Chem_Fnon%%00010%%00010output_table_1.loc['Row0', 'CHEM_UNBND'] =  Chem_Fu%%00010Sw = 10**(input_table_1.loc['Row0', 'logSw'])%%00010output_table_1.loc['Row0', '%%65279SOL'] =  str(Sw)"/>
+        <entry key="rowLimit" type="xint" value="1000"/>
+        <entry key="convertMissingToPython" type="xboolean" value="false"/>
+        <entry key="convertMissingFromPython" type="xboolean" value="false"/>
+        <entry key="sentinelOption" type="xstring" value="MIN_VAL"/>
+        <entry key="sentinelValue" type="xint" value="0"/>
+        <entry key="chunkSize" type="xint" value="500000"/>
+        <entry key="pythonVersionOption" type="xstring" value="python3"/>
+        <entry key="python2Command" type="xstring" value=""/>
+        <entry key="python3Command" type="xstring" value=""/>
+    </config>
+    <config key="nodeAnnotation">
+        <entry key="text" type="xstring" value="simulation parameter GUI"/>
+        <entry key="contentType" type="xstring" value="text/plain"/>
+        <entry key="bgcolor" type="xint" value="16777215"/>
+        <entry key="x-coordinate" type="xint" value="89"/>
+        <entry key="y-coordinate" type="xint" value="299"/>
+        <entry key="width" type="xint" value="142"/>
+        <entry key="height" type="xint" value="15"/>
+        <entry key="alignment" type="xstring" value="CENTER"/>
+        <entry key="borderSize" type="xint" value="0"/>
+        <entry key="borderColor" type="xint" value="16777215"/>
+        <entry key="defFontSize" type="xint" value="9"/>
+        <entry key="annotation-version" type="xint" value="20151123"/>
+        <config key="styles"/>
+    </config>
+    <entry key="customDescription" type="xstring" isnull="true" value=""/>
+    <entry key="state" type="xstring" value="IDLE"/>
+    <entry key="factory" type="xstring" value="org.knime.python2.nodes.script2.Python2ScriptNodeFactory2"/>
+    <entry key="node-name" type="xstring" value="Python Script (legacy)"/>
+    <entry key="node-bundle-name" type="xstring" value="KNIME Python nodes"/>
+    <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.python2.nodes"/>
+    <entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-bundle-version" type="xstring" value="5.1.0.v202303131021"/>
+    <entry key="node-feature-name" type="xstring" value="KNIME Python 2 Integration (legacy)"/>
+    <entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.python2.feature.group"/>
+    <entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-feature-version" type="xstring" value="5.1.0.v202307110639"/>
+    <config key="factory_settings"/>
+    <config key="node_creation_config">
+        <config key="Input object (pickled)"/>
+        <config key="Input table">
+            <config key="port_0">
+                <entry key="object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
+            </config>
+        </config>
+        <config key="Output table">
+            <config key="port_0">
+                <entry key="object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
+            </config>
+        </config>
+        <config key="Output image"/>
+        <config key="Output object (pickled)"/>
+    </config>
+    <entry key="name" type="xstring" value="Python Script (legacy)"/>
+    <entry key="hasContent" type="xboolean" value="false"/>
+    <entry key="isInactive" type="xboolean" value="false"/>
+    <config key="ports">
+        <config key="port_1">
+            <entry key="index" type="xint" value="1"/>
+            <entry key="port_dir_location" type="xstring" isnull="true" value=""/>
+        </config>
+    </config>
+    <config key="filestores">
+        <entry key="file_store_location" type="xstring" isnull="true" value=""/>
+        <entry key="file_store_id" type="xstring" isnull="true" value=""/>
+    </config>
+</config>

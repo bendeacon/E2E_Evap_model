@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow-metadata content-type="text/plain" xmlns="http://www.knime.org/core/node/workflow/metadata/v1.0">
+    <author>Tobias</author>
+    <created>2019-07-22T12:00:01.000+02:00</created>
+    <last-modified>2023-10-17T11:07:02.334+01:00</last-modified>
+    <description>Set DB Connector Login via Flow Variable
+
+This workflow demonstrates how the login for the DB Connector can be set via flow variables.</description>
+    <tags>
+        <tag>db</tag>
+        <tag>flow variable</tag>
+    </tags>
+</workflow-metadata>

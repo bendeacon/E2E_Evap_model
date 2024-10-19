@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--PLEASE DO NOT MODIFY THIS FILE AND BE AWARE THAT THE FILE CONTAINS CONFIDENTIAL INFORMATION.--><ChemAxon>
+    <License>
+        <Field Name="Software" Value="Protonation Plugin Group"/>
+        <Field Name="License Term" Value="Annual Renewal"/>
+        <Field Name="Licensee" Value="University of Surrey"/>
+        <Field Name="Number of Users" Value="5"/>
+        <Field Name="Expiration Date" Value="2024-11-20"/>
+        <Field Name="Support Expiration Date" Value="2024-11-20"/>
+        <Field Name="Comment" Value="null"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFCdNwaiMiP0Cu8wmeFxqOqb3TMnPAhRUhyqnfgPmKOife4FWCbpCWOsd4g=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Partitioning Plugin Group"/>
+        <Field Name="License Term" Value="Annual Renewal"/>
+        <Field Name="Licensee" Value="University of Surrey"/>
+        <Field Name="Number of Users" Value="5"/>
+        <Field Name="Expiration Date" Value="2024-11-20"/>
+        <Field Name="Support Expiration Date" Value="2024-11-20"/>
+        <Field Name="Comment" Value="null"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFH516HpbUIRdsQPOx2S1xe3vMFh4AhRCpOLaYFH09xSQ8WrOQaV204RV7g=="/>
+    </License>
+    <License>
+        <Field Name="Software" Value="Solubility Plugin"/>
+        <Field Name="License Term" Value="Annual Renewal"/>
+        <Field Name="Licensee" Value="University of Surrey"/>
+        <Field Name="Number of Users" Value="5"/>
+        <Field Name="Expiration Date" Value="2024-11-20"/>
+        <Field Name="Support Expiration Date" Value="2024-11-20"/>
+        <Field Name="Comment" Value="null"/>
+        <Restriction Name="Server Use" Value="Not Allowed"/>
+        <Signature Value="MCwCFE+cLRSj8IZp67VGMTEwW+5zzAsuAhRLon/jtgJT6E5tdPS0DMS9zpINgQ=="/>
+    </License>
+</ChemAxon>
